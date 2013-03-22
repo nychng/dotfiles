@@ -1,3 +1,5 @@
+bindkey -v
+
 #FROM BASH_PROFILE
 export ARCHFLAGS="-arch x86_64"
 export LC_ALL=en_US.UTF-8
@@ -32,6 +34,7 @@ alias sm='./manage.py schemamigration'
 alias rs_80='sudo apachectl stop; sudo ./manage.py runserver 192.168.1.107:80'
 alias vrs_80='sudo apachectl stop; sudo /Users/nai/.virtualenvs/bookenv/bin/python manage.py runserver 192.168.1.107:80'
 alias rs_8000='sudo ./manage.py runserver 192.168.1.2:8000'
+alias pk='cat ~/.ssh/id_rsa.pub | pbcopy'
 
 ## Virtual Env ##
 export WORKON_HOME=$HOME/.virtualenvs
@@ -87,7 +90,7 @@ export UPDATE_ZSH_DAYS=13
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git python django git-flow pip rsync)
+plugins=(git python django git-flow pip rsync osx virtualenvwrapper port jira github git-extras fabric)
 
 source $ZSH/oh-my-zsh.sh
 # RPROMPT="%{$fg[blue]%}%~%{$reset_color%}"

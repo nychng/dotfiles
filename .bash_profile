@@ -3,7 +3,7 @@ export LC_ALL=en_US.UTF-8
 export LANG==en_US.UTF-8
 export TERM=xterm-256color
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib:/opt/local/lib/postgresql91
-
+export EDITOR=vim
 export PATH=~/node_modules/less/path_to_bin_directory:$PATH
 
 
