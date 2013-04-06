@@ -5,20 +5,21 @@ export ARCHFLAGS="-arch x86_64"
 export LC_ALL=en_US.UTF-8
 export TERM=xterm-256color
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib:/opt/local/lib/postgresql91
-
 export PATH=~/node_modules/less/path_to_bin_directory:$PATH
+export PATH=/opt/local/bin:/opt/local/sbin:/Users/nai/node_modules/less/path_to_bin_directory:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/go/bin
+#export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python
 
 
 #sets up proper alias commands when called
 alias ls='ls -G'
 alias ll='ls -hl'
-
-
 alias vim='mvim -v'
+
 
 # Git
 alias gp='git pull'
 alias gs='git status'
+
 
 # Django
 alias .m='./manage.py'
@@ -38,7 +39,7 @@ alias pk='cat ~/.ssh/id_rsa.pub | pbcopy'
 
 ## Virtual Env ##
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
+export PROJECT_HOME=$HOME/Work
 source `which virtualenvwrapper.sh`
 
 parse_git_branch() {
@@ -50,10 +51,6 @@ PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch) \[\033
 ##
 # Your previous /Users/nai/.bash_profile file was backed up as /Users/nai/.bash_profile.macports-saved_2012-09-26_at_21:18:13
 ##
-
-# MacPorts Installer addition on 2012-09-26_at_21:18:13: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
 
 
 # Path to your oh-my-zsh configuration.
@@ -96,4 +93,4 @@ source $ZSH/oh-my-zsh.sh
 # RPROMPT="%{$fg[blue]%}%~%{$reset_color%}"
 
 # Customize to your needs...
-export PATH=/opt/local/bin:/opt/local/sbin:/Users/nai/node_modules/less/path_to_bin_directory:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/go/bin
+
