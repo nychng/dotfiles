@@ -1,1 +1,2 @@
 netrw.vba: call delete('/Users/nai/.vim/plugin/netrwPlugin.vim')|call delete('/Users/nai/.vim/autoload/netrw.vim')|call delete('/Users/nai/.vim/autoload/netrwFileHandlers.vim')|call delete('/Users/nai/.vim/autoload/netrwSettings.vim')|call delete('/Users/nai/.vim/doc/pi_netrw.txt')|call delete('/Users/nai/.vim/syntax/netrw.vim')
+delimitMate-2.6.vba: call delete('/Users/nai/.vim/plugin/delimitMate.vim')|call delete('/Users/nai/.vim/autoload/delimitMate.vim')|call delete('/Users/nai/.vim/doc/delimitMate.txt')
