@@ -7,6 +7,7 @@ export TERM=xterm-256color
 export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib:/opt/local/lib/postgresql91
 export PATH=~/node_modules/less/path_to_bin_directory:$PATH
 export PATH=/opt/local/bin:/opt/local/sbin:/Users/nai/node_modules/less/path_to_bin_directory:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/go/bin
+export C_INCLUDE_PATH=/usr/include:/usr/local/include:/opt/local/include
 #export VIRTUALENVWRAPPER_PYTHON=/opt/local/bin/python
 
 
@@ -19,6 +20,9 @@ alias vim='mvim -v'
 # Git
 alias gp='git pull'
 alias gs='git status'
+alias ag='nocorrect ag'
+alias yo='nocorrect yo'
+alias grunt='nocorrect grunt'
 
 
 # Django
@@ -30,23 +34,26 @@ alias rs='./manage.py runserver'
 alias sp='./manage.py shell_plus'
 alias tf='./manage.py test_fast'
 alias cs='./manage.py collectstatic --noinput'
-alias tc='./manage.py jenkins'
+alias tc='./manage.py jenkins --coverage-with-migrations'
 alias sm='./manage.py schemamigration'
 alias rs_80='sudo apachectl stop; sudo ./manage.py runserver 192.168.1.107:80'
 alias vrs_80='sudo apachectl stop; sudo /Users/nai/.virtualenvs/bookenv/bin/python manage.py runserver 192.168.1.107:80'
 alias rs_8000='sudo ./manage.py runserver 192.168.1.2:8000'
 alias pk='cat ~/.ssh/id_rsa.pub | pbcopy'
+alias cv='coverage run --source='.' manage.py test'
+alias cvr='coverage report'
+alias filetree="ls -R | grep ":$" | sed -e 's/:$//' -e 's/[^-][^\/]*\//--/g' -e 's/^/ /' -e 's/-/|/'" 
 
 ## Virtual Env ##
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Work
 source `which virtualenvwrapper.sh`
 
-parse_git_branch() {
-	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git::\1)/'
-	}
+#parse_git_branch() {
+	#git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git::\1)/'
+	#}
 
-PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch) \[\033[00m\]$\[\033[00m\] "
+#PS1="\[\033[00m\]\u@\h\[\033[01;34m\] \w \[\033[31m\]\$(parse_git_branch) \[\033[00m\]$\[\033[00m\] "
 
 ##
 # Your previous /Users/nai/.bash_profile file was backed up as /Users/nai/.bash_profile.macports-saved_2012-09-26_at_21:18:13
@@ -60,7 +67,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="dpoggi"
+ZSH_THEME="mh"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"

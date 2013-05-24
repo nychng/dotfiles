@@ -40,9 +40,9 @@
 #alias rs_8000='sudo ./manage.py runserver 192.168.1.2:8000'
 
 ### Virtual Env ##
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Work
-source /usr/local/bin/virtualenvwrapper.sh
+#export WORKON_HOME=$HOME/.virtualenvs
+#export PROJECT_HOME=$HOME/Work
+#source /usr/local/bin/virtualenvwrapper.sh
 
 #parse_git_branch() {
 	#git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git::\1)/'
